@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Playground1Application {
 
 	public static void main(String[] args) {
+
+		//bootstrap spring app
 		SpringApplication.run(Playground1Application.class, args);
 	}
 
