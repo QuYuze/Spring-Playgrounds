@@ -1,4 +1,4 @@
-package com.yuze.springboot.playground1.rest;
+package com.yuze.springboot.playground1.restControler;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

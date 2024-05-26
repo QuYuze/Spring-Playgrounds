@@ -8,6 +8,7 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<!-- Project Coordinates-->
 	<groupId>com.yuze.springboot</groupId>
 	<artifactId>playground1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -26,6 +27,30 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- automatically restart Spring app after code changes -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
+		<!-- actuator to monitor the app, with preset endpoints
+		/actuator Endpoint example:
+		/health : status of the app
+		-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!-- we concerns about security and we do not want all the endpoints
+		to expose freely on web
+		so starter-security helps that
+		-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 	</dependencies>
 
