@@ -1,11 +1,12 @@
 package com.yuze.springboot.playground1.dependencyClasses;
 
+import com.yuze.springboot.playground1.dependencyClasses.Coach;
 import org.springframework.stereotype.Component;
 
 //mark this class as spring bean for dependency injections
 //spring bean are java class managed by spring
 @Component
-public class CricketCoach implements Coach{
+public class CricketCoach implements Coach {
 
     @Override
     public String getDailyWorkout(){

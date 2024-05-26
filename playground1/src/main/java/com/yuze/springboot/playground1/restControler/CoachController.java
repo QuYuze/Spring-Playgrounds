@@ -15,6 +15,17 @@ public class CoachController {
         myCoach = coach;
     }
 
+    @Autowired
+    public void setCoach(Coach coach){
+        myCoach = coach;
+    }
+
+    //the same setter dependency injection can be achieved by any methods
+    @Autowired
+    public void showDependencyInjection(Coach coach){
+        myCoach = coach;
+    }
+
     @GetMapping("/dailyworkout")
     public String getDailyWorkout(){
         return myCoach.getDailyWorkout();
