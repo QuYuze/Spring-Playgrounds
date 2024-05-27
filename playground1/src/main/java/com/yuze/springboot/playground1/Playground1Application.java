@@ -31,6 +31,48 @@ manually setup the packages to scan
 		}
 )
 
+Three Injections:
+Recommended:
+Constructor
+Setter
+
+Not Recommended:
+Field --> this only use in the legacy code now, this makes hard to uni test
+
+Qualifiers:
+if multiple implementations, which component it should choose?
+use - @Qualifiers("cricketCoach) same as class name but first letter lowercase
+this also valid in the setter injections
+
+Alternatively, use @Primmary
+-no need to specifiy name but mark @Primary at class level
+Note: Qulifiers has higher prioty then Primary
+
+@Lazy
+initialize only when:
+1. dependency injections
+2. otherwise specified
+-if not annotaed with @Lazy, spring initilize the beans when the app started
+-we can also set this global app configutaion
+spring.main.lazy-initialization = true
+
+Scopes:
+scopes can be specifed at the class level
+
+Singleton - by default, all bean are singleton, only one instance in the app and share among requests
+Prototype - new instance for each request
+
+Spring bean life cycle methods
+@PreDestroy
+@PostConstruct
+
+Config Bean
+In case we have beans from third party without souce code, we cannot use @Component
+Instead we use @Configuration and @Bean to config it as the spring
+1. config the third party bean as the spring bean
+2. inject the bean as the spring bean
+3. mappings the bean
+
  */
 
 
