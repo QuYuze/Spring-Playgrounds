@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.yuze.springboot</groupId>
-	<artifactId>plaground-Hibernate-JPA-CRUD</artifactId>
+	<artifactId>playground-Hibernate-JPA-CRUD</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>plaground-Hibernate-JPA-CRUD</name>
 	<description>Demo project for Spring Boot</description>
