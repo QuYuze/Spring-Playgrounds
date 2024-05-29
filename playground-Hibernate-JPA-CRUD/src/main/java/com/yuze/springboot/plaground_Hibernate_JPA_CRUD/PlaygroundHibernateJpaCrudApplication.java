@@ -53,13 +53,13 @@ public class PlaygroundHibernateJpaCrudApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
 		return runner -> {
 			//createStudent(studentDAO);
-			//createMultipleStudent(studentDAO);
+			createMultipleStudent(studentDAO);
 			//readStudent(studentDAO);
 			//queryForStudents(studentDAO);
 			//queryByStudentLastName(studentDAO);
 			//updateStudent(studentDAO);
 			//deleteStudent(studentDAO);
-			deleteAllStudent(studentDAO);
+			//deleteAllStudent(studentDAO);
 
 		};
 	}
