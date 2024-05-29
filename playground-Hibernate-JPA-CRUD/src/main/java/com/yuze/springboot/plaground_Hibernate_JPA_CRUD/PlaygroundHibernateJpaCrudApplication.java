@@ -32,6 +32,11 @@ Data Access Object, such as Student()
 2. define DAO implementations, inject the entity manager
 3. update main app
 
+Retrieving Obj
+1. add new method to dao
+2. define the implementation
+3. update the main app
+
 
  */
 @SpringBootApplication
@@ -46,8 +51,32 @@ public class PlaygroundHibernateJpaCrudApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
 		return runner -> {
 			//createStudent(studentDAO);
-			createMultipleStudent(studentDAO);
+			//createMultipleStudent(studentDAO);
+			readStudent(studentDAO);
 		};
+	}
+
+	private void readStudent(StudentDAO studentDAO) {
+		//create student
+		System.out.println("Creating new student obj...");
+		Student tempStudent = new Student("yuze", "qu", "yzq@gmail.com");
+
+		//save student
+		System.out.println("Saving Student obj...");
+		studentDAO.save(tempStudent);
+
+		//display id of the save student
+		int id = tempStudent.getId();
+		System.out.println("Saved student generated id: " + id);
+
+		//retrieve student using id
+		System.out.println("Retrieving student using id...");
+		Student myStudent = studentDAO.findByID(id);
+
+		//display student
+		System.out.println("Retrieved studen: " +  myStudent.toString());
+
+
 	}
 
 	private void createMultipleStudent(StudentDAO studentDAO) {
