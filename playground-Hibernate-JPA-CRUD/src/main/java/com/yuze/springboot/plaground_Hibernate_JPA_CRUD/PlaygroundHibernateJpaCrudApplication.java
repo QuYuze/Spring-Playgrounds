@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.List;
+
 
 /*
 
@@ -52,8 +54,27 @@ public class PlaygroundHibernateJpaCrudApplication {
 		return runner -> {
 			//createStudent(studentDAO);
 			//createMultipleStudent(studentDAO);
-			readStudent(studentDAO);
+			//readStudent(studentDAO);
+			//queryForStudents(studentDAO);
+			queryByStudentLastName(studentDAO);
+
 		};
+	}
+
+	private void queryByStudentLastName(StudentDAO studentDAO) {
+		//get list of student
+		List<Student> list = studentDAO.findByLastName("qu");
+
+		//display the list if the students
+		list.forEach((student -> System.out.println(student.toString())));
+	}
+
+	private void queryForStudents(StudentDAO studentDAO) {
+		//get a list of students
+		List<Student> list = studentDAO.findAll();
+
+		//display list of students
+		list.forEach((student -> System.out.println(student.toString())));
 	}
 
 	private void readStudent(StudentDAO studentDAO) {
@@ -82,8 +103,8 @@ public class PlaygroundHibernateJpaCrudApplication {
 	private void createMultipleStudent(StudentDAO studentDAO) {
 		//create multiple student
 		System.out.println("Creating new student obj...");
-		Student tempStudent1 = new Student("ke", "lee", "yzq@gmail.com");
-		Student tempStudent2 = new Student("yuze", "ke", "yzq@gmail.com");
+		Student tempStudent1 = new Student("ke", "lee", "ke.li@gmail.com");
+		Student tempStudent2 = new Student("yuze", "qu", "yzq@gmail.com");
 
 
 		//save teh students
