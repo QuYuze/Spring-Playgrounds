@@ -56,9 +56,36 @@ public class PlaygroundHibernateJpaCrudApplication {
 			//createMultipleStudent(studentDAO);
 			//readStudent(studentDAO);
 			//queryForStudents(studentDAO);
-			queryByStudentLastName(studentDAO);
+			//queryByStudentLastName(studentDAO);
+			//updateStudent(studentDAO);
+			//deleteStudent(studentDAO);
+			deleteAllStudent(studentDAO);
 
 		};
+	}
+
+	private void deleteAllStudent(StudentDAO studentDAO) {
+		System.out.println("Rows deleted: " +studentDAO.deleteAll());
+	}
+
+	private void deleteStudent(StudentDAO studentDAO) {
+		int id = 1;
+		System.out.println("Deletinf student with id: "+id);
+		studentDAO.delete(id);
+	}
+
+	private void updateStudent(StudentDAO studentDAO) {
+		int studentID = 1;
+		System.out.println("getting student with id : "+studentID);
+
+		Student student = studentDAO.findByID(studentID);
+
+		System.out.println("Updating student...");
+
+		student.setFirstName("ke");
+		studentDAO.update(student);
+
+		System.out.println("updated student: " + student.toString());
 	}
 
 	private void queryByStudentLastName(StudentDAO studentDAO) {
