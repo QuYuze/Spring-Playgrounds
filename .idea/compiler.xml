@@ -6,17 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="playground-REST-CRUD-APIs" />
+        <module name="playground2-Hibernate-JPA-CRUD" />
+        <module name="playground3-REST-Json-Exceptions" />
+        <module name="microTransactions" />
         <module name="playground1" />
-        <module name="playground-Hibernate-JPA-CRUD" />
+        <module name="playground-REST-CRUD" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="playground-Hibernate-JPA-CRUD" options="-parameters" />
-      <module name="playground-REST-CRUD-APIs" options="-parameters" />
+      <module name="microTransactions" options="-parameters" />
+      <module name="playground-REST-CRUD" options="-parameters" />
       <module name="playground1" options="-parameters" />
+      <module name="playground2-Hibernate-JPA-CRUD" options="-parameters" />
+      <module name="playground3-REST-Json-Exceptions" options="-parameters" />
     </option>
   </component>
 </project>
