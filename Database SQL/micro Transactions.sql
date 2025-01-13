@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `microTransaction_directory`;
+micro_transactionsCREATE DATABASE  IF NOT EXISTS `microTransaction_directory`;
 USE `microTransaction_directory`;
 
 DROP TABLE IF EXISTS `micro_transactions`;

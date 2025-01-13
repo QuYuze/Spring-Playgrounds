@@ -5,9 +5,7 @@ import com.yuze.springboot.playground_REST_CRUD.entity.Employee;
 import com.yuze.springboot.playground_REST_CRUD.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +24,43 @@ public class EmployeeController {
     public List<Employee> getAllEmployee(){
         System.out.println("Return all exisiting Employee...");
         return employeeService.findAll();
+    }
+
+    @GetMapping("/employee/{employeeId}")
+    public Employee findById(@PathVariable int employeeId){
+
+        Employee employee = employeeService.findById(employeeId);
+        if(employee == null){
+            throw new RuntimeException("Employee id does not exists");
+        }
+
+        return employee;
+    }
+
+    //add mapping for POST /employee - add new employee
+    @PostMapping("/employee")
+    public Employee addEmployee(@RequestBody Employee employee){
+        // in case there's a id, set id to 0
+        // this is force save of new item instead of the updateq
+        employee.setId(0);
+        Employee dbEmployee = employeeService.save(employee);
+
+        return dbEmployee;
+    }
+
+    @PutMapping("/employee")
+    public Employee updateById(@RequestBody Employee employee){
+        Employee dbEmployee = employeeService.save(employee);
+
+        return dbEmployee;
+    }
+
+    @DeleteMapping("/employee/{employeeId}")
+    public void deleteById(@PathVariable int employeeId){
+        Employee tempEmployee = employeeService.findById(employeeId);
+        if(tempEmployee == null){
+            throw new RuntimeException("Employeee id not found: "+ employeeId);
+        }
+        employeeService.deleteById(employeeId);
     }
 }
