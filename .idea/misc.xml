@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
@@ -11,6 +12,11 @@
         <option value="$PROJECT_DIR$/playground2-Hibernate-JPA-CRUD/pom.xml" />
         <option value="$PROJECT_DIR$/playground3-REST-Json-Exceptions/pom.xml" />
         <option value="$PROJECT_DIR$/microTransactions/pom.xml" />
+        <option value="$PROJECT_DIR$/playground3.2 Spring Data Jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/playground3.3-Spring-Data-Rest/pom.xml" />
+        <option value="$PROJECT_DIR$/playground3.2-Spring-Data-Jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/playground4-Spring-REST-Security/pom.xml" />
+        <option value="$PROJECT_DIR$/employeeManager/pom.xml" />
       </list>
     </option>
   </component>

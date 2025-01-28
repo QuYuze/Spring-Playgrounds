@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/employeeManager/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microTransactions/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/playground1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/playground2-Hibernate-JPA-CRUD/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/playground3-REST-Json-Exceptions/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/playground3.1-REST-CRUD/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/playground3.2-Spring-Data-Jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/playground3.3-Spring-Data-Rest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/playground4-Spring-REST-Security/src/main/java" charset="UTF-8" />
   </component>
 </project>

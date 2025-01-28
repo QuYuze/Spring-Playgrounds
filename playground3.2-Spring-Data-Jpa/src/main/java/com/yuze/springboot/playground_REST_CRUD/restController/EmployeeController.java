@@ -1,6 +1,5 @@
 package com.yuze.springboot.playground_REST_CRUD.restController;
 
-import com.yuze.springboot.playground_REST_CRUD.dao.EmployeeDAO;
 import com.yuze.springboot.playground_REST_CRUD.entity.Employee;
 import com.yuze.springboot.playground_REST_CRUD.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -6,18 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cruddemo" />
         <module name="playground2-Hibernate-JPA-CRUD" />
         <module name="playground3-REST-Json-Exceptions" />
         <module name="microTransactions" />
+        <module name="employeeManager" />
         <module name="playground1" />
-        <module name="playground-REST-CRUD" />
+        <module name="playground-REST-CRUD (3)" />
+        <module name="playground-REST-CRUD (1)" />
+        <module name="playground-REST-CRUD (2)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="playground-REST-CRUD" target="20" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cruddemo" options="-parameters" />
+      <module name="employeeManager" options="-parameters" />
       <module name="microTransactions" options="-parameters" />
       <module name="playground-REST-CRUD" options="-parameters" />
+      <module name="playground-REST-CRUD (1)" options="-parameters" />
+      <module name="playground-REST-CRUD (2)" options="-parameters" />
+      <module name="playground-REST-CRUD (3)" options="-parameters" />
       <module name="playground1" options="-parameters" />
       <module name="playground2-Hibernate-JPA-CRUD" options="-parameters" />
       <module name="playground3-REST-Json-Exceptions" options="-parameters" />
